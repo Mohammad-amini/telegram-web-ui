@@ -1,0 +1,10 @@
+app-direct{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 768px;
+    padding-bottom: 5px;
+    background-image: url('/imgs/pattern.svg');
+    background-size: contain;
+}

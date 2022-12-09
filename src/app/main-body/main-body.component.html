@@ -1,0 +1,18 @@
+<div class="body">
+  <ul>  	
+  	<li *ngFor="let chat of chats; index as i;" [attr.data-chat]="i" (click)="showMessage(i)">
+  		<div class="chat-item">
+  			<img class="profile" src="/imgs/profile-img-0{{i % 3 + 1}}.jpg">
+  			<div class="chat-content">
+  				<span class="title">{{chat.title}}</span>
+  				<span class="last-message">{{chat.message}}</span>
+	  		</div>
+  			<div class="chat-info">
+  				<span class="datetime">12:15 AM</span>
+  				<span class="count">78</span>
+	  		</div>
+  		</div>
+  	</li>
+  </ul>
+  <button class="new-message"><i class="fa fa-pencil"></i></button>
+</div>

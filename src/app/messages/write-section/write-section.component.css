@@ -1,0 +1,60 @@
+.write-section{
+	display: grid;
+	grid-template-columns: 1fr 50px;
+	color: #fff;
+    padding: 0 5px;
+}
+.write-section .imogi{
+	color: yellow;
+}
+.send-btn{
+    width: 50px;
+    color: #000;
+    background-color: transparent;
+    border: 0;
+}
+.text-section{
+    display: grid;
+    grid-template-columns: 20px 1fr 20px;
+	background-color: #1d1d1d;
+	border-radius: 15px;
+	padding: 12px 10px 13px 15px;
+	margin: auto 5px auto 0px;
+}
+.text-section input{
+	background-color: transparent;
+	border: 0px;
+	margin: 0 5px;
+	outline: 0px;
+	position: relative;
+	color: #fff;
+}
+.text-section::before{
+	position: absolute;
+	content: "";
+    right: 60px;
+    bottom: 8px;
+    background-color: #1d1d1d;
+    width: 15px;
+    height: 15px;
+}
+.text-section::after{
+	position: absolute;
+	content: "";
+    right: 48px;
+    bottom: 8px;
+    background-color: #1d1d1d;
+    width: 15px;
+    height: 15px;
+    -webkit-clip-path: polygon(20% 22%, 41% 49%, 62% 70%, 80% 84%, 100% 100%, 50% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
+	clip-path: polygon(20% 22%, 41% 49%, 62% 70%, 80% 84%, 100% 100%, 50% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
+}
+.write-section .send-btn{
+	color: #fff;
+	font-size: 1.3em;
+	background-color: #8774e1;
+	border-radius: 50%;
+	aspect-ratio: 1;
+	margin-right: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,71 @@
+.container .top{
+	display: grid;
+	grid-template-columns: 50px 1fr;
+	margin: 15px 0;
+	padding: 5px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #c0c0c0;
+    margin: 0;
+    padding: 20px 0 10px 0;
+/*    max-width: 550px;*/
+    inset: 0 0 auto 0;
+    left: 0;
+    right: 0;
+}
+.container .top #burger{
+    position: absolute;
+    margin: 40px 0px 0 10px;
+/*    display: none; */
+    color: #fff;
+    padding: 10px 15px;
+    list-style: none;
+    border-radius: 10px;
+    line-height: 2;
+    min-width: 75%;
+    border-radius: 10px;
+}
+.container .top #burger{
+     /*display: unset; */
+ }
+.container .top .burger-btn{
+    background-color: transparent;
+    border: 0;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.container .top #burger li{
+    background-color: #000000c0;
+    color: #fff;
+    padding: 10px 15px;
+    list-style: none;
+    cursor: pointer;
+}
+.container .top #burger li:hover{
+	background-color: #000000aa;
+}
+.container .top .search{
+	display: grid;
+	grid-template-columns: 50px 1fr;
+	border: 2px solid #fff;
+	color: #fff;
+	border-radius: 25px;
+	padding: 5px 5px 5px 15px;
+	outline: 0;
+	align-items: center;
+	transition: border 0.25s ease;
+	margin-right: 15px;
+}
+.container .top .search input{
+	width: 100%;
+	border: 0px;
+	padding: 5px;
+	outline: 0px;
+	background-color: transparent;
+	color: #fff;
+}
+.container .top .search:has(input:focus){
+	border: 2px solid #3590d2;
+	color: #3590d2;
+}

@@ -1,0 +1,8 @@
+<div class="write-section">
+	<div class="text-section">
+		<span class="imogi"><i class="fa fa-smile"></i></span>
+		<input #text (focus)="writeStatus = true" (focusout)="writeStatus = false" type="text" placeholder="Message...!">
+		<span class="attach"><i class="fa fa-file"></i></span>
+	</div>
+	<button (click)="sendMessage()" class="send-btn"><i *ngIf="writeStatus" class="fa fa-paper-plane"></i><i *ngIf="!writeStatus" class="fa fa-microphone" ></i></button>
+</div>

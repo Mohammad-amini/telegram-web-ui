@@ -1,0 +1,11 @@
+app-messages-section {
+    height: calc(100% - 120px);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow-y: scroll;
+}
+app-messages-section ul{
+	height: 100%;
+}
