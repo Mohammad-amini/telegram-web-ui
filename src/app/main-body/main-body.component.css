@@ -93,14 +93,15 @@
 /*****************************************************/
 .new-message{
     position: fixed;
-    inset-block-end: 5px;
-    inset-inline-end: 5px;
-    background-color: #0000ff;
-    width: 45px;
-    height: 45px;
+    inset-block-end: 15px;
+    inset-inline-end: 15px;
+    background-color: #3535ff;
+    width: 55px;
+    height: 55px;
     border-radius: 50%;
     border: 0px;
     color: #fff;
     font-size: 1.2em;
+    cursor: pointer;
 }
 /*****************************************************/

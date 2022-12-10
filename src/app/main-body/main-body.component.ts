@@ -18,7 +18,7 @@ export class MainBodyComponent {
   }
 
   ngOnInit(){
-    for(var i = 0; i < 10; i++){
+    for(var i = 0; i < 15; i++){
       this.chats.push({'title': ngfaker.name.firstName(), 'message': ngfaker.lorem.phrase()})
     } 
     console.log(this.chats)

@@ -1,3 +1,3 @@
 <app-top-section></app-top-section>
-<app-messages-section></app-messages-section>
-<app-write-section></app-write-section>
+<app-messages-section [messages]="messages"></app-messages-section>
+<app-write-section (newItemEvent)="sendMessage($event)"></app-write-section>

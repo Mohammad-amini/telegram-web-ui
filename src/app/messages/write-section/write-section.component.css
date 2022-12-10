@@ -1,3 +1,6 @@
+app-write-section{
+	margin-top: 5px;
+}
 .write-section{
 	display: grid;
 	grid-template-columns: 1fr 50px;
@@ -5,7 +8,7 @@
     padding: 0 5px;
 }
 .write-section .imogi{
-	color: yellow;
+	color: mediumvioletred;
 }
 .send-btn{
     width: 50px;
@@ -18,34 +21,36 @@
     grid-template-columns: 20px 1fr 20px;
 	background-color: #1d1d1d;
 	border-radius: 15px;
-	padding: 12px 10px 13px 15px;
+	padding: 10px 10px 10px 15px;
 	margin: auto 5px auto 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.text-section input{
+.text-section :is(input, textarea){
 	background-color: transparent;
 	border: 0px;
-	margin: 0 5px;
+	margin: 0 10px;
 	outline: 0px;
 	position: relative;
 	color: #fff;
+	width: 100%;
+    height: 30px;
+	font-size: 1.3em;
+}
+.text-section::after, .text-section::before{
+	position: absolute;
+	content: "";
+    background-color: #1d1d1d;
+    width: 15px;
+    height: 15px;
+    bottom: 6px;
 }
 .text-section::before{
-	position: absolute;
-	content: "";
     right: 60px;
-    bottom: 8px;
-    background-color: #1d1d1d;
-    width: 15px;
-    height: 15px;
 }
 .text-section::after{
-	position: absolute;
-	content: "";
-    right: 48px;
-    bottom: 8px;
-    background-color: #1d1d1d;
-    width: 15px;
-    height: 15px;
+	right: 48px;
     -webkit-clip-path: polygon(20% 22%, 41% 49%, 62% 70%, 80% 84%, 100% 100%, 50% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
 	clip-path: polygon(20% 22%, 41% 49%, 62% 70%, 80% 84%, 100% 100%, 50% 100%, 0 100%, 0% 70%, 0% 35%, 0 0);
 }

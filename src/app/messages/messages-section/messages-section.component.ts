@@ -1,5 +1,5 @@
-import { Component, ViewEncapsulation  } from '@angular/core';
-var ngfaker = require('ng-faker');
+import { Component, ViewEncapsulation, Input, ViewChild, ElementRef } from '@angular/core';
+
 
 @Component({
   selector: 'app-messages-section',
@@ -8,15 +8,35 @@ var ngfaker = require('ng-faker');
     encapsulation: ViewEncapsulation.None
 })
 export class MessagesSectionComponent {
-  messages: any = [
-    { text: "casc", time: "12:11"}
-  ]
+  @Input() messages: any = []
+  arriveBottom: boolean = false;
+  @ViewChild('messagesContainer') private messagesContainer: any;
 
-  constructor(){
-  }
+  constructor(){}
+
   ngOnInit(){
-    for(var i = 0; i < 15; i++){
-      this.messages.push({text: ngfaker.lorem.phrase(), time: ngfaker.random.number()})
+    try {
+        if(this.messagesContainer?.nativeElement.scrollTop == this.messagesContainer?.nativeElement.scrollHeight){
+          this.arriveBottom = true;
+        }
+        this.messagesContainer.nativeElement.scrollTop = this.messagesContainer.nativeElement.scrollHeight;
+    } catch(err) { }
+  }
+
+  ngDoCheck(){
+    console.log(this.messagesContainer?.nativeElement.scrollTop, this.messagesContainer?.nativeElement.scrollHeight)
+    try {
+        if(this.messagesContainer.nativeElement.scrollTop != this.messagesContainer.nativeElement.scrollHeight){
+          this.arriveBottom = false;
+        }
+      } catch(err) { }
     }
+
+  showContainer(){
+        try {
+            this.messagesContainer.nativeElement.scrollTop = this.messagesContainer.nativeElement.scrollHeight;
+            this.arriveBottom = true;
+          console.log(this.messagesContainer)
+        } catch(err) { }
   }
 }

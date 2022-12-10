@@ -1,7 +1,7 @@
 .top-section{
-    background-color: #c0c0c0;
+    background-color: #00000090;
 	display: grid;
-	grid-template-columns: 60px 1fr 60px;
+	grid-template-columns: clamp(35px, 10%,60px) 1fr clamp(35px, 10%,60px);
 	margin: 0;
 	padding: 5px 0 5px 0;
 	color: #fff;
@@ -19,9 +19,11 @@
     transition: all 0.2s ease;
     border-radius: 50%;
     scale: 0.8;
+    aspect-ratio: 1;
+    margin-top: 10%;
 }
 .top-section button:hover {
-    background-color: #1d1d1d30;
+    background-color: lightgray;
     scale: 0.9;
 }
 .top-section .top-content {
@@ -30,15 +32,23 @@
     gap: 5px;
     width: calc(100%);
     padding: 0 5px;
+    overflow: hidden;
 }
-.top-section .top-content :is(a, p, label, span){
+.top-section .top-content :is(a, p, label, span) {
     white-space: nowrap;
     overflow: hidden;
     max-width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 .top-section .top-content img{
     width: 30%;
     max-width: 60px;
     border-radius: 50%;
     display: inline;
+    aspect-ratio: 1;
+    object-fit: cover;
 }

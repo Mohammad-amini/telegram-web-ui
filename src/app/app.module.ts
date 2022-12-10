@@ -16,6 +16,7 @@ import { TopSectionComponent } from './messages/top-section/top-section.componen
 import { MessagesSectionComponent } from './messages/messages-section/messages-section.component';
 import { WriteSectionComponent } from './messages/write-section/write-section.component';
 import { MessageSectionComponent } from './messages/message-section/message-section.component';
+import { ImogiCollectionComponent } from './utils/imogi-collection/imogi-collection.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MessageSectionComponent } from './messages/message-section/message-sect
     TopSectionComponent,
     MessagesSectionComponent,
     WriteSectionComponent,
-    MessageSectionComponent
+    MessageSectionComponent,
+    ImogiCollectionComponent
   ],
   imports: [
     AppRoutingModule,

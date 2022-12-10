@@ -3,8 +3,9 @@ app-direct{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-height: 768px;
+    max-height: 860px;
     padding-bottom: 5px;
     background-image: url('/imgs/pattern.svg');
     background-size: contain;
+    background-color: #00000090;
 }

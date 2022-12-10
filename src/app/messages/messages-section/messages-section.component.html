@@ -1,5 +1,6 @@
-<ul>
+<ul style="overflow: scroll; height: xyz;" #messagesContainer>
 	<li *ngFor="let message of messages; index as i;">
-		<app-message-section [data]="message"></app-message-section>
+		<app-message-section  [data]="message"></app-message-section>
 	</li>
+	<button class="go-to-bottom" *ngIf="!arriveBottom" (click)="showContainer()"><i class="fas fa-angle-double-down"></i></button>
 </ul>

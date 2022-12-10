@@ -5,11 +5,16 @@
     max-width: 80%;
     color: #fff;
     padding: 5px;
-    border-radius: 5px;
+    border-radius: 10px;
     margin-left: 6px;
+}
+.message.self{
+    margin-left: auto;
+    margin-right: 6px;
 }
 .message :is(.message-text){
     display: inline-block;
+    padding: 5px 2px;
 }
 .message :is(.message-info){
     display: block;

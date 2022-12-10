@@ -5,7 +5,20 @@ app-messages-section {
     flex-direction: column;
     justify-content: flex-end;
     overflow-y: scroll;
+    scroll-behavior: smooth;
 }
 app-messages-section ul{
+    list-style: none;
 	height: 100%;
+    scroll-behavior: smooth;
+}
+app-messages-section ul .go-to-bottom{
+    background-color: transparent;
+    border: 1px solid;
+    width: 55px;
+    height: 55px;
+    color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    inset: auto 5px 60px auto;
 }
