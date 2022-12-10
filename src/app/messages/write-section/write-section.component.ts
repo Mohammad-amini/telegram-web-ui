@@ -33,7 +33,14 @@ export class WriteSectionComponent {
       this.showImogiPanel = false;
     }
   }
-
+  focusText(){
+    this.writeStatus = true;
+    this.showImogiPanel = false
+  }
+  focusoutText(){
+    this.writeStatus = false;
+    this.showImogiPanel = false
+  }
   toggleImogiesPanel(){
     this.showImogiPanel = !this.showImogiPanel;
   }

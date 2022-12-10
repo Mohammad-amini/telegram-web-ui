@@ -18,6 +18,7 @@
 .container .body ul li{
     cursor: pointer;
     transition: all 0.25s ease;
+    box-shadow: 0 0 5px #0000000a, inset 0 0 5px #ffffff3a, inset 0 0 5px #ff00001a;
 }
 .container .body ul li:not(:last-child){
 /*    margin: 0px auto 10px auto;*/

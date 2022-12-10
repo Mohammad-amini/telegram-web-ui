@@ -10,6 +10,13 @@ app-write-section{
 .write-section .imogi{
 	color: mediumvioletred;
 }
+.write-section :is(.imogi, .attach){
+    font-size: 1.35em;
+    cursor: pointer;
+}
+.write-section :is(.imogi, .attach) i{
+	color: #fff;
+}
 .send-btn{
     width: 50px;
     color: #000;
@@ -37,6 +44,8 @@ app-write-section{
 	width: 100%;
     height: 30px;
 	font-size: 1.3em;
+	resize: none;
+    line-height: 1.7;
 }
 .text-section::after, .text-section::before{
 	position: absolute;

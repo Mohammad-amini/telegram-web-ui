@@ -19,12 +19,28 @@ export class MainBodyComponent {
 
   ngOnInit(){
     for(var i = 0; i < 15; i++){
-      this.chats.push({'title': ngfaker.name.firstName(), 'message': ngfaker.lorem.phrase()})
+      var j = Math.ceil(Math.random() * 3 - 1);
+      this.chats.push({
+        'title': ngfaker.name.firstName(),
+        'message': [ngfaker.lorem.phrase(), ngfaker.lorem.phrase(), ngfaker.lorem.phrase()][j],
+        'count': Math.ceil(Math.random() * 1000),
+        'type': ['direct', 'group', 'channel'][j]
+      })
     } 
     console.log(this.chats)
   }
 
   showMessage(route: any){
-    this.router.navigate(['/direct'], { relativeTo: this.route });
+    switch (route.type){
+      case 'direct':
+        this.router.navigate(['/direct'], { relativeTo: route });
+        break;
+      case 'group':
+        this.router.navigate(['/group'], { relativeTo: route });
+        break;
+      case 'channel':
+        this.router.navigate(['/channel'], { relativeTo: route });
+        break;
+    }
   }
 }

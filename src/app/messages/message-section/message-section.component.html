@@ -1,4 +1,4 @@
-<div class="message" [ngClass]="{'self': data.id % 3 == 0}">
+<div class="message" [ngClass]="{'self': data.id % 3 == 0 && data.type != 'channel'}">
 	<div class="message-text">{{data.text}}</div>
 	<div class="message-info">{{data.time}}</div>
 </div>

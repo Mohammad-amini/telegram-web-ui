@@ -9,7 +9,7 @@ import { Component, ViewEncapsulation, Input, ViewChild, ElementRef } from '@ang
 })
 export class MessagesSectionComponent {
   @Input() messages: any = []
-  arriveBottom: boolean = false;
+  arriveBottom: boolean = true;
   @ViewChild('messagesContainer') private messagesContainer: any;
 
   constructor(){}
@@ -23,14 +23,14 @@ export class MessagesSectionComponent {
     } catch(err) { }
   }
 
-  ngDoCheck(){
-    console.log(this.messagesContainer?.nativeElement.scrollTop, this.messagesContainer?.nativeElement.scrollHeight)
-    try {
-        if(this.messagesContainer.nativeElement.scrollTop != this.messagesContainer.nativeElement.scrollHeight){
-          this.arriveBottom = false;
-        }
-      } catch(err) { }
-    }
+  // ngDoCheck(){
+  //   console.log(this.messagesContainer?.nativeElement.scrollTop, this.messagesContainer?.nativeElement.scrollHeight)
+  //   try {
+  //       if(this.messagesContainer.nativeElement.scrollTop != this.messagesContainer.nativeElement.scrollHeight){
+  //         this.arriveBottom = false;
+  //       }
+  //     } catch(err) { }
+  //   }
 
   showContainer(){
         try {

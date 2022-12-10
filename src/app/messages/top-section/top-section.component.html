@@ -1,10 +1,8 @@
 <div class="top-section">
 	<button (click)="goBack()"><i class="fa fa-arrow-left"></i></button>
 	<div class="top-content">
-		<img src="imgs/profile-img-01.jpg" alt="">
-		<p>
-			dvlsdvknldvs vdlkvnsdvdvlsdvknldvs
-		</p>
+		<img src="imgs/{{info.profile.image}}" alt="">
+		<p [innerHtml]="info.content"></p>
 	</div>
 	<button><i class="fa fa-ellipsis-v"></i></button>
 </div>

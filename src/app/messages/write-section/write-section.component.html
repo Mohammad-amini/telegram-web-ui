@@ -1,7 +1,7 @@
 <div class="write-section">
 	<div class="text-section">
 		<span (click)="toggleImogiesPanel()" class="imogi"><i class="fa fa-smile"></i></span>
-		<textarea #text (focus)="writeStatus = true" (keyup)="startWrite($event)" (focusout)="writeStatus = false" (keyup.enter)="sendMessage()" placeholder="Message...!"></textarea>
+		<textarea #text (focus)="focusText()" (keyup)="startWrite($event)" (focusout)="focusoutText()" (keyup.enter)="sendMessage()" placeholder="Message...!"></textarea>
 		<span class="attach"><i class="fa fa-file"></i></span>
 	</div>
 	<app-imogi-collection #imodies *ngIf="showImogiPanel" (selectedImogi)="getImogi($event)"></app-imogi-collection>

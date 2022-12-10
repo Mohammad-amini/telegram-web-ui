@@ -1,6 +1,6 @@
 <div class="body">
   <ul>  	
-  	<li *ngFor="let chat of chats; index as i;" [attr.data-chat]="i" (click)="showMessage(i)">
+  	<li *ngFor="let chat of chats; index as i;" [attr.data-chat]="i" (click)="showMessage(chat)">
   		<div class="chat-item">
   			<img class="profile" src="/imgs/profile-img-0{{i % 3 + 1}}.jpg">
   			<div class="chat-content">
@@ -9,7 +9,7 @@
 	  		</div>
   			<div class="chat-info">
   				<span class="datetime">12:15 AM</span>
-  				<span class="count">78</span>
+  				<span class="count" *ngIf="chat.count > 0">{{chat.count}}</span>
 	  		</div>
   		</div>
   	</li>

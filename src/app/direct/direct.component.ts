@@ -12,7 +12,7 @@ export class DirectComponent {
 
   ngOnInit(){
     for(var i = 0; i < 15; i++){
-      this.messages.push({id: i, text: ngfaker.lorem.phrase(), time: ngfaker.random.number()})
+      this.messages.push({id: i, text: ngfaker.lorem.phrase(), time: ngfaker.random.number(), type: 'direct'})
     }
   }
 

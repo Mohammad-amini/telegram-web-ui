@@ -6,6 +6,7 @@
 	padding: 5px 0 5px 0;
 	color: #fff;
     box-shadow: 2px -5px 10px #fff, 0 5px 10px #00000070;
+    align-items: center;
 }
 .top-section button {
     background-color: transparent;
@@ -44,11 +45,12 @@
     margin: 0;
     padding: 0;
 }
-.top-section .top-content img{
+.top-section .top-content img {
     width: 30%;
-    max-width: 60px;
+    max-width: 50px;
     border-radius: 50%;
     display: inline;
     aspect-ratio: 1;
     object-fit: cover;
+    margin-right: 10px;
 }
